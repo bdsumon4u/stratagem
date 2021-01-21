@@ -5,7 +5,7 @@
 		<Option title="stratagem"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake_modules\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/hotash/CLionProjects/stratagem/cmake-build-debug"/>
@@ -44,6 +44,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/hotash/CLionProjects/stratagem/C:SFML/include"/>
+					<Add directory="/home/hotash/CLionProjects/stratagem/SFML/include"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -66,6 +68,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/hotash/CLionProjects/stratagem/C:SFML/include"/>
+					<Add directory="/home/hotash/CLionProjects/stratagem/SFML/include"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -87,6 +91,9 @@
 		</Unit>
 		<Unit filename="/home/hotash/CLionProjects/stratagem/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/hotash/CLionProjects/stratagem/cmake_modules/FindSFML.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
