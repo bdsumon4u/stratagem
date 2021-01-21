@@ -140,6 +140,10 @@ int main() {
             }
         }
 
+        if (status == OVER) {
+            window.draw(sGameOver);
+        }
+
         window.display();
     }
 
