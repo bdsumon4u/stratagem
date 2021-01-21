@@ -25,9 +25,9 @@ using sf::Vector2f;
 using sf::Music;
 
 int main() {
+    float time;
     Level level;
-    float time, delay = 0.07; // Copter Can Move in Every delay seconds
-    int x, y, dir, status, win_point = 650;
+    int x, y, dir;
     Enemy enemies[level.max_enemy_count()];
 
     RenderWindow window(VideoMode(N * S, M * S), "Stratagem Game!");

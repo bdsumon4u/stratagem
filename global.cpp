@@ -10,12 +10,21 @@
  * S => Size Of Each Element In The Grid
  */
 const int M = 25, N = 40, S = 25;
+/*
+ * Minimum Score For Next Level
+ */
+int win_point = 650;
 
 /**
  * Game Grid
  */
 vector<vector<int>> grid(M, vector<int>(N));
 
+/**
+ * Copter Can Move in Every delay seconds
+ */
+float delay = 0.07;
+int status;
 /**
  * All Possible Status Of The Game
  */

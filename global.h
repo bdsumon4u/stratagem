@@ -12,7 +12,9 @@ using std::vector;
 #ifndef STRATAGEM_GLOBAL_H
 #define STRATAGEM_GLOBAL_H
 
+extern float delay;
 extern const int M, N, S;
+extern int status, win_point;
 extern vector<vector<int>> grid;
 extern const int PLAYING, OVER, WIN, PAUSED;
 extern const int FREE, BLOCKED, BLOCKING, TRANSITION;
