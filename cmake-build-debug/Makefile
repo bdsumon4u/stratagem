@@ -143,6 +143,60 @@ stratagem/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/build
 .PHONY : stratagem/fast
 
+enemy.o: enemy.cpp.o
+
+.PHONY : enemy.o
+
+# target to build an object file
+enemy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/enemy.cpp.o
+.PHONY : enemy.cpp.o
+
+enemy.i: enemy.cpp.i
+
+.PHONY : enemy.i
+
+# target to preprocess a source file
+enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/enemy.cpp.i
+.PHONY : enemy.cpp.i
+
+enemy.s: enemy.cpp.s
+
+.PHONY : enemy.s
+
+# target to generate assembly for a file
+enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/enemy.cpp.s
+.PHONY : enemy.cpp.s
+
+global.o: global.cpp.o
+
+.PHONY : global.o
+
+# target to build an object file
+global.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/global.cpp.o
+.PHONY : global.cpp.o
+
+global.i: global.cpp.i
+
+.PHONY : global.i
+
+# target to preprocess a source file
+global.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/global.cpp.i
+.PHONY : global.cpp.i
+
+global.s: global.cpp.s
+
+.PHONY : global.s
+
+# target to generate assembly for a file
+global.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/global.cpp.s
+.PHONY : global.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -179,6 +233,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... stratagem"
+	@echo "... enemy.o"
+	@echo "... enemy.i"
+	@echo "... enemy.s"
+	@echo "... global.o"
+	@echo "... global.i"
+	@echo "... global.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

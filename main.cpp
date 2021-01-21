@@ -1,4 +1,6 @@
 #include "SFML/Graphics.hpp"
+#include "global.h"
+#include "enemy.h"
 #include "iostream"
 
 using std::cout;
@@ -10,33 +12,12 @@ using sf::Keyboard;
 using sf::Texture;
 using sf::Sprite;
 using sf::Clock;
-
-/**
- * M * N => Grid Dimension
- * S => Size Of Each Element In The Grid
- */
-const int M = 25, N = 40, S = 25;
-/**
- * Game Grid
- */
-int grid[M][N];
-
-/**
- * All Possible Status Of The Game
- */
-const int PLAYING = 0, OVER = 1;
-/**
- * All Possible State Of A Position In The Grid
- */
-const int FREE = 0, BLOCKED = 1, BLOCKING = 2;
-/**
- * Copter's Direction
- */
-const int TOP = 1, RIGHT = 2, BOTTOM = 3, LEFT = 4;
+using sf::Vector2f;
 
 int main() {
     float time, delay = 0.07; // Copter Can Move in Every delay seconds
-    int x, y, dir, status, score;
+    int enemy_count = 4, x, y, dir, status, score;
+    Enemy enemies[enemy_count];
 
     RenderWindow window(VideoMode(N * S, M * S), "Stratagem Game!");
     window.setFramerateLimit(60);
@@ -121,6 +102,16 @@ int main() {
             time = 0;
         }
 
+        /**
+         * Keep Moving Enemies
+         */
+        for (int i = 0; i < enemy_count; ++i) {
+            enemies[i].move();
+            if (grid[enemies[i].y / S][enemies[i].x / S] == 2) {
+                status = OVER;
+            }
+        }
+
         window.clear();
 
         for (int i = 0; i < M; i++) {
@@ -138,6 +129,11 @@ int main() {
                     window.draw(sRedTile);
                 }
             }
+        }
+
+        for (int i = 0; i < enemy_count; ++i) {
+            sEnemy.setPosition(Vector2f(enemies[i].x, enemies[i].y));
+            window.draw(sEnemy);
         }
 
         if (status == OVER) {
