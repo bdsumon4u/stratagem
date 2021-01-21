@@ -9,6 +9,7 @@ using sf::Event;
 using sf::Keyboard;
 using sf::Texture;
 using sf::Sprite;
+using sf::Clock;
 
 /**
  * M * N => Grid Dimension
@@ -34,12 +35,14 @@ const int FREE = 0, BLOCKED = 1, BLOCKING = 2;
 const int TOP = 1, RIGHT = 2, BOTTOM = 3, LEFT = 4;
 
 int main() {
+    float time, delay = 0.07; // Copter Can Move in Every delay seconds
     int x, y, dir, status, score;
 
     RenderWindow window(VideoMode(N * S, M * S), "Stratagem Game!");
     window.setFramerateLimit(60);
 
     Event ev{};
+    Clock clock;
 
     Texture blueTile, redTile, enemy, copter, gameOver, gameWin;
     blueTile.loadFromFile("assets/blue-tile.png");
@@ -81,6 +84,37 @@ int main() {
                 Keyboard::isKeyPressed(Keyboard::Down) && (dir = BOTTOM);
                 Keyboard::isKeyPressed(Keyboard::Left) && (dir = LEFT);
             }
+        }
+
+        time = clock.getElapsedTime().asSeconds();
+        if (time > delay) {
+            if (dir == TOP) {
+                y--;
+                y < 0 && (y = 0);
+            } else if (dir == RIGHT) {
+                x++;
+                x >= N && (x = N - 1);
+            } else if (dir == BOTTOM) {
+                y++;
+                y >= M && (y = M - 1);
+            } else if (dir == LEFT) {
+                x--;
+                x < 0 && (x = 0);
+            } else {
+                // Not Moving
+            }
+
+            if (grid[y][x] == BLOCKING) {
+                status = OVER;
+            } else if (grid[y][x] == FREE) {
+                grid[y][x] = BLOCKING;
+                score++;
+            } else if (grid[y][x] == BLOCKED) {
+                dir = 0;
+            }
+
+            clock.restart();
+            time = 0;
         }
 
         window.clear();
