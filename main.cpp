@@ -1,4 +1,5 @@
 #include "SFML/Graphics.hpp"
+#include "SFML/Audio.hpp"
 #include "global.h"
 #include "enemy.h"
 #include "iostream"
@@ -13,6 +14,7 @@ using sf::Texture;
 using sf::Sprite;
 using sf::Clock;
 using sf::Vector2f;
+using sf::Music;
 
 int main() {
     float time, delay = 0.07; // Copter Can Move in Every delay seconds
@@ -24,6 +26,8 @@ int main() {
 
     Event ev{};
     Clock clock;
+    Music music;
+    music.openFromFile("assets/Mind-Bender.ogg");
 
     Texture blueTile, redTile, enemy, copter, gameOver, gameWin;
     blueTile.loadFromFile("assets/blue-tile.png");
@@ -58,12 +62,14 @@ int main() {
             }
             if (ev.type == Event::KeyPressed) {
                 if (Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+                    music.stop();
                     goto play_game;
                 }
                 if (Keyboard::isKeyPressed(Keyboard::Space)) {
                     status = status == PAUSED ? PLAYING : PAUSED;
                 }
                 if (status == PAUSED) {
+                    music.pause();
                     continue;
                 }
                 Keyboard::isKeyPressed(Keyboard::Up) && (dir = TOP);
@@ -83,6 +89,10 @@ int main() {
 
         if (status != PLAYING) {
             continue;
+        }
+        // Game Is Playing, Music Is Not Playing
+        if (music.getStatus() != Music::Status::Playing) {
+            music.play();
         }
 
         time = clock.getElapsedTime().asSeconds();
@@ -181,8 +191,10 @@ int main() {
         }
 
         if (status == OVER) {
+            music.stop();
             window.draw(sGameOver);
         } else if (status == WIN) {
+            music.stop();
             window.draw(sGameWin);
         }
 

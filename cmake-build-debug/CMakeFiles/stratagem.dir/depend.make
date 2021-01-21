@@ -8,6 +8,23 @@ CMakeFiles/stratagem.dir/enemy.cpp.o: ../global.h
 CMakeFiles/stratagem.dir/global.cpp.o: ../global.cpp
 CMakeFiles/stratagem.dir/global.cpp.o: ../global.h
 
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/AlResource.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/Export.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/InputSoundFile.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/Listener.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/Music.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/OutputSoundFile.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/Sound.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/SoundBuffer.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/SoundBufferRecorder.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/SoundFileFactory.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/SoundFileFactory.inl
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/SoundFileReader.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/SoundFileWriter.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/SoundRecorder.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/SoundSource.hpp
+CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Audio/SoundStream.hpp
 CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Config.hpp
 CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Graphics.hpp
 CMakeFiles/stratagem.dir/main.cpp.o: ../SFML/include/SFML/Graphics/BlendMode.hpp

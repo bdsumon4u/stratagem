@@ -9,6 +9,23 @@ CMakeFiles/stratagem.dir/global.cpp.o
  /home/hotash/CLionProjects/stratagem/global.cpp
  /home/hotash/CLionProjects/stratagem/global.h
 CMakeFiles/stratagem.dir/main.cpp.o
+ ../SFML/include/SFML/Audio.hpp
+ ../SFML/include/SFML/Audio/AlResource.hpp
+ ../SFML/include/SFML/Audio/Export.hpp
+ ../SFML/include/SFML/Audio/InputSoundFile.hpp
+ ../SFML/include/SFML/Audio/Listener.hpp
+ ../SFML/include/SFML/Audio/Music.hpp
+ ../SFML/include/SFML/Audio/OutputSoundFile.hpp
+ ../SFML/include/SFML/Audio/Sound.hpp
+ ../SFML/include/SFML/Audio/SoundBuffer.hpp
+ ../SFML/include/SFML/Audio/SoundBufferRecorder.hpp
+ ../SFML/include/SFML/Audio/SoundFileFactory.hpp
+ ../SFML/include/SFML/Audio/SoundFileFactory.inl
+ ../SFML/include/SFML/Audio/SoundFileReader.hpp
+ ../SFML/include/SFML/Audio/SoundFileWriter.hpp
+ ../SFML/include/SFML/Audio/SoundRecorder.hpp
+ ../SFML/include/SFML/Audio/SoundSource.hpp
+ ../SFML/include/SFML/Audio/SoundStream.hpp
  ../SFML/include/SFML/Config.hpp
  ../SFML/include/SFML/Graphics.hpp
  ../SFML/include/SFML/Graphics/BlendMode.hpp
