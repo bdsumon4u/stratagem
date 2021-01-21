@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/stratagem.dir/Score.cpp.o"
   "CMakeFiles/stratagem.dir/enemy.cpp.o"
   "CMakeFiles/stratagem.dir/global.cpp.o"
   "CMakeFiles/stratagem.dir/main.cpp.o"

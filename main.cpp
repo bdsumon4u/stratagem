@@ -2,6 +2,7 @@
 #include "SFML/Audio.hpp"
 #include "global.h"
 #include "enemy.h"
+#include "Score.h"
 #include "iostream"
 
 using std::cout;
@@ -18,7 +19,7 @@ using sf::Music;
 
 int main() {
     float time, delay = 0.07; // Copter Can Move in Every delay seconds
-    int enemy_count = 4, x, y, dir, status, score, win_point = 650;
+    int enemy_count = 4, x, y, dir, status, win_point = 650;
     Enemy enemies[enemy_count];
 
     RenderWindow window(VideoMode(N * S, M * S), "Stratagem Game!");
@@ -46,7 +47,8 @@ int main() {
 
     play_game:
     status = PLAYING;
-    x = y = dir = score = 0;
+    x = y = dir = 0;
+    Score score;
     for (int row = 0; row < M; ++row) {
         for (int col = 0; col < N; ++col) {
             grid[row][col]
@@ -117,12 +119,12 @@ int main() {
                 status = OVER;
             } else if (grid[y][x] == FREE) {
                 grid[y][x] = BLOCKING;
-                score++;
+                score.increment();
             } else if (grid[y][x] == BLOCKED) {
                 dir = 0;
             }
 
-            cout << "Score: " << score << endl;
+            cout << "Score: " << score.current << endl;
             if (status == OVER) {
                 cout << "Game Over" << endl;
             }
@@ -149,20 +151,20 @@ int main() {
                 observe(enemies[i].y / S, enemies[i].x / S);
             }
 
-            score = 4 - 2 * (M + N);
+            score.update(4 - 2 * (M + N));
             for (int i = 0; i < M; i++) {
                 for (int j = 0; j < N; j++) {
                     if (grid[i][j] == TRANSITION) {
                         grid[i][j] = FREE;
                     } else {
                         grid[i][j] = BLOCKED;
-                        score++;
+                        score.increment();
                     }
                 }
             }
         }
 
-        if (score >= win_point) {
+        if (score.current >= win_point) {
             status = WIN;
         }
 
@@ -189,6 +191,8 @@ int main() {
             sEnemy.setPosition(Vector2f(enemies[i].x, enemies[i].y));
             window.draw(sEnemy);
         }
+
+        window.draw(score.scoretxt);
 
         if (status == OVER) {
             music.stop();
