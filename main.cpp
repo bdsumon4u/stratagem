@@ -3,7 +3,14 @@
 #include "global.h"
 #include "enemy.h"
 #include "Score.h"
+#include "Level.h"
 #include "iostream"
+
+#ifdef _WIN32
+#include "Windows.h"
+#else
+#include "unistd.h"
+#endif
 
 using std::cout;
 using std::endl;
@@ -18,9 +25,10 @@ using sf::Vector2f;
 using sf::Music;
 
 int main() {
+    Level level;
     float time, delay = 0.07; // Copter Can Move in Every delay seconds
-    int enemy_count = 4, x, y, dir, status, win_point = 650;
-    Enemy enemies[enemy_count];
+    int x, y, dir, status, win_point = 650;
+    Enemy enemies[level.max_enemy_count()];
 
     RenderWindow window(VideoMode(N * S, M * S), "Stratagem Game!");
     window.setFramerateLimit(60);
@@ -136,7 +144,7 @@ int main() {
         /**
          * Keep Moving Enemies
          */
-        for (int i = 0; i < enemy_count; ++i) {
+        for (int i = 0; i < level.enemy_count(); ++i) {
             enemies[i].move();
             if (grid[enemies[i].y / S][enemies[i].x / S] == 2) {
                 status = OVER;
@@ -147,7 +155,7 @@ int main() {
          * After Reaching Safe Position
          */
         if (grid[y][x] == BLOCKED) {
-            for (int i = 0; i < enemy_count; i++) {
+            for (int i = 0; i < level.enemy_count(); i++) {
                 observe(enemies[i].y / S, enemies[i].x / S);
             }
 
@@ -169,6 +177,10 @@ int main() {
         }
 
         window.clear();
+        if (level.finished) {
+            music.stop();
+            goto finished;
+        }
 
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
@@ -187,14 +199,18 @@ int main() {
             }
         }
 
-        for (int i = 0; i < enemy_count; ++i) {
+        for (int i = 0; i < level.enemy_count(); ++i) {
             sEnemy.setPosition(Vector2f(enemies[i].x, enemies[i].y));
             window.draw(sEnemy);
         }
 
         window.draw(score.scoretxt);
+        window.draw(level.leveltxt);
 
-        if (status == OVER) {
+        finished:
+        if (level.finished) {
+            // All Level Finished
+        } else if (status == OVER) {
             music.stop();
             window.draw(sGameOver);
         } else if (status == WIN) {
@@ -203,6 +219,12 @@ int main() {
         }
 
         window.display();
+
+        if (status == WIN) {
+            sleep(3);
+            level.increment();
+            goto play_game;
+        }
     }
 
     return 0;

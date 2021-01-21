@@ -143,6 +143,33 @@ stratagem/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/build
 .PHONY : stratagem/fast
 
+Level.o: Level.cpp.o
+
+.PHONY : Level.o
+
+# target to build an object file
+Level.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/Level.cpp.o
+.PHONY : Level.cpp.o
+
+Level.i: Level.cpp.i
+
+.PHONY : Level.i
+
+# target to preprocess a source file
+Level.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/Level.cpp.i
+.PHONY : Level.cpp.i
+
+Level.s: Level.cpp.s
+
+.PHONY : Level.s
+
+# target to generate assembly for a file
+Level.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/Level.cpp.s
+.PHONY : Level.cpp.s
+
 Score.o: Score.cpp.o
 
 .PHONY : Score.o
@@ -260,6 +287,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... stratagem"
+	@echo "... Level.o"
+	@echo "... Level.i"
+	@echo "... Level.s"
 	@echo "... Score.o"
 	@echo "... Score.i"
 	@echo "... Score.s"

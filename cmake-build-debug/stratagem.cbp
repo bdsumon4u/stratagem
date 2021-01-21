@@ -86,6 +86,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/hotash/CLionProjects/stratagem/Level.cpp">
+			<Option target="stratagem"/>
+		</Unit>
+		<Unit filename="/home/hotash/CLionProjects/stratagem/Level.h">
+			<Option target="stratagem"/>
+		</Unit>
 		<Unit filename="/home/hotash/CLionProjects/stratagem/Score.cpp">
 			<Option target="stratagem"/>
 		</Unit>

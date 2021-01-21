@@ -3,7 +3,7 @@ project(stratagem)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(stratagem main.cpp enemy.cpp enemy.h global.cpp global.h Score.cpp Score.h)
+add_executable(stratagem main.cpp enemy.cpp enemy.h global.cpp global.h Score.cpp Score.h Level.cpp Level.h)
 
 include_directories(/usr/include C:SFML/include "${CMAKE_SOURCE_DIR}/SFML/include")
 

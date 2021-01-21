@@ -850,11 +850,9 @@ SFML/Config.hpp
 
 ../SFML/include/SFML/Window/WindowStyle.hpp
 
-/home/hotash/CLionProjects/stratagem/Score.cpp
+/home/hotash/CLionProjects/stratagem/Level.h
 SFML/Graphics.hpp
 /home/hotash/CLionProjects/stratagem/SFML/Graphics.hpp
-Score.h
-/home/hotash/CLionProjects/stratagem/Score.h
 
 /home/hotash/CLionProjects/stratagem/Score.h
 SFML/Graphics.hpp
@@ -879,6 +877,12 @@ enemy.h
 /home/hotash/CLionProjects/stratagem/enemy.h
 Score.h
 /home/hotash/CLionProjects/stratagem/Score.h
+Level.h
+/home/hotash/CLionProjects/stratagem/Level.h
 iostream
 /home/hotash/CLionProjects/stratagem/iostream
+Windows.h
+/home/hotash/CLionProjects/stratagem/Windows.h
+unistd.h
+/home/hotash/CLionProjects/stratagem/unistd.h
 
