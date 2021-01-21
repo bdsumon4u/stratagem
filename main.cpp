@@ -157,9 +157,9 @@ int main() {
         /**
          * Keep Moving Enemies
          */
-        for (int i = 0; i < level.enemy_count(); ++i) {
+        for (int i = 0; i < level.enemy_count; ++i) {
             enemies[i].move();
-            if (grid[enemies[i].y / S][enemies[i].x / S] == 2) {
+            if (grid[enemies[i].y / S][enemies[i].x / S] == BLOCKING) {
                 status = OVER;
             }
         }
@@ -168,7 +168,7 @@ int main() {
          * After Reaching Safe Position
          */
         if (grid[y][x] == BLOCKED) {
-            for (int i = 0; i < level.enemy_count(); i++) {
+            for (int i = 0; i < level.enemy_count; i++) {
                 observe(enemies[i].y / S, enemies[i].x / S);
             }
 
@@ -212,7 +212,7 @@ int main() {
             }
         }
 
-        for (int i = 0; i < level.enemy_count(); ++i) {
+        for (int i = 0; i < level.enemy_count; ++i) {
             sEnemy.setPosition(Vector2f(enemies[i].x, enemies[i].y));
             window.draw(sEnemy);
         }

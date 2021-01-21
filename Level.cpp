@@ -7,6 +7,7 @@
 using sf::Color;
 
 Level::Level() {
+    enemy_count = min_enemy;
     font.loadFromFile("assets/fonts/EastSeaDokdo-Regular.ttf");
     leveltxt.setFont(font);
     leveltxt.setFillColor(Color::Red);
@@ -22,6 +23,7 @@ void Level::update(int updated) {
         finished = true;
     } else {
         current = updated;
+        enemy_count = min_enemy + current - 1;
     }
     sprintf(levelstr, "LEVEL: %d", current);
     leveltxt.setString(levelstr);
@@ -30,10 +32,6 @@ void Level::update(int updated) {
 
 void Level::increment(int inc) {
     update(current + inc);
-}
-
-int Level::enemy_count() {
-    return min_enemy + current - 1;
 }
 
 int Level::max_enemy_count() {

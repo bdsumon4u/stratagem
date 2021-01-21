@@ -14,7 +14,8 @@ using sf::Text;
 
 class Level {
 public:
-    int current = 1, min_enemy = 3, max_level = 5;
+    int current = 1, max_level = 5;
+    int min_enemy = 3, enemy_count;
     bool finished = false;
     char levelstr[20];
 
@@ -24,7 +25,6 @@ public:
     Level();
     void update(int updated);
     void increment(int inc = 1);
-    int enemy_count();
     int max_enemy_count();
 };
 
