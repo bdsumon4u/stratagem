@@ -1,0 +1,3 @@
+/home/hotash/CLionProjects/stratagem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/hotash/CLionProjects/stratagem/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/hotash/CLionProjects/stratagem/cmake-build-debug/CMakeFiles/stratagem.dir

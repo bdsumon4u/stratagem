@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/stratagem.dir/main.cpp.o  -o stratagem 
