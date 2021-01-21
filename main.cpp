@@ -67,9 +67,17 @@ int main() {
                     continue;
                 }
                 Keyboard::isKeyPressed(Keyboard::Up) && (dir = TOP);
-                Keyboard::isKeyPressed(Keyboard::Right) && (dir = RIGHT);
+                if (Keyboard::isKeyPressed(Keyboard::Right)) {
+                    dir = RIGHT;
+                    sCopter.setScale(1, 1);
+                    sCopter.setOrigin(0, 0);
+                }
                 Keyboard::isKeyPressed(Keyboard::Down) && (dir = BOTTOM);
-                Keyboard::isKeyPressed(Keyboard::Left) && (dir = LEFT);
+                if (Keyboard::isKeyPressed(Keyboard::Left)) {
+                    dir = LEFT;
+                    sCopter.setScale(-1, 1);
+                    sCopter.setOrigin(S, 0);
+                }
             }
         }
 
