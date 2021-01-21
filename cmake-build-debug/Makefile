@@ -143,6 +143,33 @@ stratagem/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/build
 .PHONY : stratagem/fast
 
+CenterText.o: CenterText.cpp.o
+
+.PHONY : CenterText.o
+
+# target to build an object file
+CenterText.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/CenterText.cpp.o
+.PHONY : CenterText.cpp.o
+
+CenterText.i: CenterText.cpp.i
+
+.PHONY : CenterText.i
+
+# target to preprocess a source file
+CenterText.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/CenterText.cpp.i
+.PHONY : CenterText.cpp.i
+
+CenterText.s: CenterText.cpp.s
+
+.PHONY : CenterText.s
+
+# target to generate assembly for a file
+CenterText.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stratagem.dir/build.make CMakeFiles/stratagem.dir/CenterText.cpp.s
+.PHONY : CenterText.cpp.s
+
 Level.o: Level.cpp.o
 
 .PHONY : Level.o
@@ -287,6 +314,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... stratagem"
+	@echo "... CenterText.o"
+	@echo "... CenterText.i"
+	@echo "... CenterText.s"
 	@echo "... Level.o"
 	@echo "... Level.i"
 	@echo "... Level.s"

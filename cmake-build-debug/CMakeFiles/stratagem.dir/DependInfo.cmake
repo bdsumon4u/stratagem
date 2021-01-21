@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/hotash/CLionProjects/stratagem/CenterText.cpp" "/home/hotash/CLionProjects/stratagem/cmake-build-debug/CMakeFiles/stratagem.dir/CenterText.cpp.o"
   "/home/hotash/CLionProjects/stratagem/Level.cpp" "/home/hotash/CLionProjects/stratagem/cmake-build-debug/CMakeFiles/stratagem.dir/Level.cpp.o"
   "/home/hotash/CLionProjects/stratagem/Score.cpp" "/home/hotash/CLionProjects/stratagem/cmake-build-debug/CMakeFiles/stratagem.dir/Score.cpp.o"
   "/home/hotash/CLionProjects/stratagem/enemy.cpp" "/home/hotash/CLionProjects/stratagem/cmake-build-debug/CMakeFiles/stratagem.dir/enemy.cpp.o"

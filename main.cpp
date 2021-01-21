@@ -1,5 +1,6 @@
 #include "SFML/Graphics.hpp"
 #include "SFML/Audio.hpp"
+#include "CenterText.h"
 #include "global.h"
 #include "enemy.h"
 #include "Score.h"
@@ -150,11 +151,6 @@ int main() {
                 dir = 0;
             }
 
-            cout << "Score: " << score.current << endl;
-            if (status == OVER) {
-                cout << "Game Over" << endl;
-            }
-
             clock.restart();
             time = 0;
         }
@@ -228,6 +224,11 @@ int main() {
         finished:
         if (level.finished) {
             // All Level Finished
+            CenterText text;
+            text.setString("Congratulations!");
+            window.draw(text.position(-50));
+            text.setString("You've Cracked All The Levels!");
+            window.draw(text.position(50));
         } else if (status == OVER) {
             music.stop();
             window.draw(sGameOver);

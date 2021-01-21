@@ -850,6 +850,20 @@ SFML/Config.hpp
 
 ../SFML/include/SFML/Window/WindowStyle.hpp
 
+/home/hotash/CLionProjects/stratagem/CenterText.h
+SFML/Graphics.hpp
+/home/hotash/CLionProjects/stratagem/SFML/Graphics.hpp
+string
+/home/hotash/CLionProjects/stratagem/string
+
+/home/hotash/CLionProjects/stratagem/Level.cpp
+SFML/Graphics.hpp
+/home/hotash/CLionProjects/stratagem/SFML/Graphics.hpp
+global.h
+/home/hotash/CLionProjects/stratagem/global.h
+Level.h
+/home/hotash/CLionProjects/stratagem/Level.h
+
 /home/hotash/CLionProjects/stratagem/Level.h
 SFML/Graphics.hpp
 /home/hotash/CLionProjects/stratagem/SFML/Graphics.hpp
@@ -871,6 +885,8 @@ SFML/Graphics.hpp
 /home/hotash/CLionProjects/stratagem/SFML/Graphics.hpp
 SFML/Audio.hpp
 /home/hotash/CLionProjects/stratagem/SFML/Audio.hpp
+CenterText.h
+/home/hotash/CLionProjects/stratagem/CenterText.h
 global.h
 /home/hotash/CLionProjects/stratagem/global.h
 enemy.h
