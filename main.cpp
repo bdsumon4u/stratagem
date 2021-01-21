@@ -38,7 +38,7 @@ int main() {
     sGameOver.setPosition(100, 100);
     sGameWin.setColor(sf::Color::Red);
     sGameWin.setPosition(110, 10);
-    sEnemy.setOrigin(12.5, 12.5); // Origin Of Enemy is Center.
+    sEnemy.setOrigin(S / 2.0, S / 2.0); // Origin Of Enemy is Center.
 
     play_game:
     status = PLAYING;
