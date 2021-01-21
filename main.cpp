@@ -98,6 +98,11 @@ int main() {
                 dir = 0;
             }
 
+            cout << "Score: " << score << endl;
+            if (status == OVER) {
+                cout << "Game Over" << endl;
+            }
+
             clock.restart();
             time = 0;
         }
@@ -109,6 +114,27 @@ int main() {
             enemies[i].move();
             if (grid[enemies[i].y / S][enemies[i].x / S] == 2) {
                 status = OVER;
+            }
+        }
+
+        /*
+         * After Reaching Safe Position
+         */
+        if (grid[y][x] == BLOCKED) {
+            for (int i = 0; i < enemy_count; i++) {
+                observe(enemies[i].y / S, enemies[i].x / S);
+            }
+
+            score = 4 - 2 * (M + N);
+            for (int i = 0; i < M; i++) {
+                for (int j = 0; j < N; j++) {
+                    if (grid[i][j] == TRANSITION) {
+                        grid[i][j] = FREE;
+                    } else {
+                        grid[i][j] = BLOCKED;
+                        score++;
+                    }
+                }
             }
         }
 
