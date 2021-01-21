@@ -3,9 +3,11 @@
 //
 
 #include "SFML/Graphics.hpp"
+#include "global.h"
 
 using sf::Font;
 using sf::Text;
+using sf::Color;
 
 #ifndef STRATAGEM_SCORE_H
 #define STRATAGEM_SCORE_H

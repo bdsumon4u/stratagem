@@ -2,11 +2,7 @@
 // Created by hotash on 1/21/21.
 //
 
-#include "SFML/Graphics.hpp"
-#include "global.h"
 #include "Score.h"
-
-using sf::Color;
 
 Score::Score() {
     font.loadFromFile("assets/fonts/EastSeaDokdo-Regular.ttf");

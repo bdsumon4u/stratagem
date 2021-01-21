@@ -2,12 +2,8 @@
 // Created by hotash on 1/21/21.
 //
 
-#include "iostream"
 #include "global.h"
 
-using std::cout;
-using std::endl;
-using std::vector;
 
 /**
  * M * N => Grid Dimension

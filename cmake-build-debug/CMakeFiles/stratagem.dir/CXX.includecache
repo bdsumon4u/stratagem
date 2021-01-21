@@ -850,33 +850,53 @@ SFML/Config.hpp
 
 ../SFML/include/SFML/Window/WindowStyle.hpp
 
+/home/hotash/CLionProjects/stratagem/CenterText.cpp
+CenterText.h
 /home/hotash/CLionProjects/stratagem/CenterText.h
-SFML/Graphics.hpp
-/home/hotash/CLionProjects/stratagem/SFML/Graphics.hpp
-string
-/home/hotash/CLionProjects/stratagem/string
 
-/home/hotash/CLionProjects/stratagem/Level.cpp
+/home/hotash/CLionProjects/stratagem/CenterText.h
 SFML/Graphics.hpp
 /home/hotash/CLionProjects/stratagem/SFML/Graphics.hpp
 global.h
 /home/hotash/CLionProjects/stratagem/global.h
+string
+/home/hotash/CLionProjects/stratagem/string
+
+/home/hotash/CLionProjects/stratagem/Level.cpp
 Level.h
 /home/hotash/CLionProjects/stratagem/Level.h
 
 /home/hotash/CLionProjects/stratagem/Level.h
 SFML/Graphics.hpp
 /home/hotash/CLionProjects/stratagem/SFML/Graphics.hpp
+global.h
+/home/hotash/CLionProjects/stratagem/global.h
+
+/home/hotash/CLionProjects/stratagem/Score.cpp
+Score.h
+/home/hotash/CLionProjects/stratagem/Score.h
 
 /home/hotash/CLionProjects/stratagem/Score.h
 SFML/Graphics.hpp
 /home/hotash/CLionProjects/stratagem/SFML/Graphics.hpp
+global.h
+/home/hotash/CLionProjects/stratagem/global.h
+
+/home/hotash/CLionProjects/stratagem/enemy.cpp
+enemy.h
+/home/hotash/CLionProjects/stratagem/enemy.h
 
 /home/hotash/CLionProjects/stratagem/enemy.h
-iostream
-/home/hotash/CLionProjects/stratagem/iostream
+global.h
+/home/hotash/CLionProjects/stratagem/global.h
+
+/home/hotash/CLionProjects/stratagem/global.cpp
+global.h
+/home/hotash/CLionProjects/stratagem/global.h
 
 /home/hotash/CLionProjects/stratagem/global.h
+iostream
+/home/hotash/CLionProjects/stratagem/iostream
 vector
 /home/hotash/CLionProjects/stratagem/vector
 

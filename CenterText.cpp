@@ -2,9 +2,7 @@
 // Created by hotash on 1/21/21.
 //
 
-#include "SFML/Graphics.hpp"
 #include "CenterText.h"
-#include "global.h"
 
 CenterText::CenterText() {
     font.loadFromFile("assets/fonts/EastSeaDokdo-Regular.ttf");

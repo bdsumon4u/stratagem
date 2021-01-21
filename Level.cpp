@@ -2,8 +2,6 @@
 // Created by hotash on 1/21/21.
 //
 
-#include "SFML/Graphics.hpp"
-#include "global.h"
 #include "Level.h"
 
 using sf::Color;

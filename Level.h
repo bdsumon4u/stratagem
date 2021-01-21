@@ -3,6 +3,7 @@
 //
 
 #include "SFML/Graphics.hpp"
+#include "global.h"
 
 using sf::Font;
 using sf::Text;

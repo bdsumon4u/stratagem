@@ -5,7 +5,6 @@
 #include "enemy.h"
 #include "Score.h"
 #include "Level.h"
-#include "iostream"
 
 #ifdef _WIN32
 #include "Windows.h"

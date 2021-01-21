@@ -2,7 +2,6 @@
 // Created by hotash on 1/21/21.
 //
 
-#include "global.h"
 #include "enemy.h"
 
 Enemy::Enemy() {

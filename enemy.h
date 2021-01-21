@@ -2,7 +2,7 @@
 // Created by hotash on 1/21/21.
 //
 
-#include "iostream"
+#include "global.h"
 
 #ifndef STRATAGEM_ENEMY_H
 #define STRATAGEM_ENEMY_H
