@@ -6,6 +6,7 @@ using std::endl;
 using sf::RenderWindow;
 using sf::VideoMode;
 using sf::Event;
+using sf::Keyboard;
 
 /**
  * M * N => Grid Dimension
@@ -53,6 +54,15 @@ int main() {
         while (window.pollEvent(ev)) {
             if (ev.type == Event::Closed) {
                 window.close();
+            }
+            if (ev.type == Event::KeyPressed) {
+                if (Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+                    goto play_game;
+                }
+                Keyboard::isKeyPressed(Keyboard::Up) && (dir = TOP);
+                Keyboard::isKeyPressed(Keyboard::Right) && (dir = RIGHT);
+                Keyboard::isKeyPressed(Keyboard::Down) && (dir = BOTTOM);
+                Keyboard::isKeyPressed(Keyboard::Left) && (dir = LEFT);
             }
         }
 
