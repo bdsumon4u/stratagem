@@ -7,6 +7,8 @@ using sf::RenderWindow;
 using sf::VideoMode;
 using sf::Event;
 using sf::Keyboard;
+using sf::Texture;
+using sf::Sprite;
 
 /**
  * M * N => Grid Dimension
@@ -39,6 +41,21 @@ int main() {
 
     Event ev{};
 
+    Texture blueTile, redTile, enemy, copter, gameOver, gameWin;
+    blueTile.loadFromFile("assets/blue-tile.png");
+    redTile.loadFromFile("assets/red-tile.png");
+    enemy.loadFromFile("assets/enemy.png");
+    copter.loadFromFile("assets/copter.png");
+    gameOver.loadFromFile("assets/game-over.png");
+    gameWin.loadFromFile("assets/game-win.png");
+
+    Sprite sBlueTile(blueTile), sRedTile(redTile), sEnemy(enemy), sCopter(copter), sGameOver(gameOver), sGameWin(gameWin);
+    sGameOver.setColor(sf::Color::Red);
+    sGameOver.setPosition(100, 100);
+    sGameWin.setColor(sf::Color::Red);
+    sGameWin.setPosition(110, 10);
+    sEnemy.setOrigin(12.5, 12.5); // Origin Of Enemy is Center.
+
     play_game:
     status = PLAYING;
     x = y = dir = score = 0;
@@ -67,6 +84,24 @@ int main() {
         }
 
         window.clear();
+
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < N; j++) {
+                if (grid[i][j] == FREE) {
+                    continue;
+                } else if (i == y && j == x) {
+                    sCopter.setPosition(j * S, i * S);
+                    window.draw(sCopter);
+                } else if (grid[i][j] == BLOCKED) {
+                    sBlueTile.setPosition(j * S, i * S);
+                    window.draw(sBlueTile);
+                } else { // BLOCKING
+                    sRedTile.setPosition(j * S, i * S);
+                    window.draw(sRedTile);
+                }
+            }
+        }
+
         window.display();
     }
 
