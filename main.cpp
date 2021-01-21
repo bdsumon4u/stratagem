@@ -16,7 +16,7 @@ using sf::Vector2f;
 
 int main() {
     float time, delay = 0.07; // Copter Can Move in Every delay seconds
-    int enemy_count = 4, x, y, dir, status, score;
+    int enemy_count = 4, x, y, dir, status, score, win_point = 650;
     Enemy enemies[enemy_count];
 
     RenderWindow window(VideoMode(N * S, M * S), "Stratagem Game!");
@@ -138,6 +138,10 @@ int main() {
             }
         }
 
+        if (score >= win_point) {
+            status = WIN;
+        }
+
         window.clear();
 
         for (int i = 0; i < M; i++) {
@@ -164,6 +168,8 @@ int main() {
 
         if (status == OVER) {
             window.draw(sGameOver);
+        } else if (status == WIN) {
+            window.draw(sGameWin);
         }
 
         window.display();
