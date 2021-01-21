@@ -86,6 +86,10 @@ int main() {
             }
         }
 
+        if (status != PLAYING) {
+            continue;
+        }
+
         time = clock.getElapsedTime().asSeconds();
         if (time > delay) {
             if (dir == TOP) {
