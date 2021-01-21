@@ -60,6 +60,12 @@ int main() {
                 if (Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
                     goto play_game;
                 }
+                if (Keyboard::isKeyPressed(Keyboard::Space)) {
+                    status = status == PAUSED ? PLAYING : PAUSED;
+                }
+                if (status == PAUSED) {
+                    continue;
+                }
                 Keyboard::isKeyPressed(Keyboard::Up) && (dir = TOP);
                 Keyboard::isKeyPressed(Keyboard::Right) && (dir = RIGHT);
                 Keyboard::isKeyPressed(Keyboard::Down) && (dir = BOTTOM);

@@ -23,7 +23,7 @@ vector<vector<int>> grid(M, vector<int>(N));
 /**
  * All Possible Status Of The Game
  */
-const int PLAYING = 0, OVER = 1, WIN = 2;
+const int PLAYING = 0, OVER = 1, WIN = 2, PAUSED = 3;
 /**
  * All Possible State Of A Position In The Grid
  */
