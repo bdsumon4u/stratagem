@@ -38,6 +38,7 @@ int main() {
     Music music;
     music.openFromFile("assets/Mind-Bender.ogg");
 
+    sf::Rect<float> bounds;
     Texture blueTile, redTile, enemy, copter, gameOver, gameWin;
     blueTile.loadFromFile("assets/blue-tile.png");
     redTile.loadFromFile("assets/red-tile.png");
@@ -47,12 +48,29 @@ int main() {
     gameWin.loadFromFile("assets/game-win.png");
 
     Sprite sBlueTile(blueTile), sRedTile(redTile), sEnemy(enemy), sCopter(copter), sGameOver(gameOver), sGameWin(gameWin);
+    /*
+     * Game Over
+     */
     sGameOver.setColor(sf::Color::Red);
-    sGameOver.setPosition(100, 100);
+    bounds = sGameOver.getLocalBounds();
+    sGameOver.setOrigin(bounds.width / 2.0, bounds.height / 2.0);
+    sGameOver.setPosition(N * S / 2.0, M * S / 2.0);
+    /*
+     * Game Win
+     */
     sGameWin.setColor(sf::Color::Red);
-    sGameWin.setPosition(110, 10);
+    bounds = sGameWin.getLocalBounds();
+    sGameWin.setOrigin(bounds.width / 2.0, bounds.height / 2.0);
+    sGameWin.setPosition(N * S / 2.0, M * S / 2.0);
+    /*
+     * Enemy
+     */
     sEnemy.setOrigin(S / 2.0, S / 2.0); // Origin Of Enemy is Center.
 
+
+    /*
+     * Game Logic
+     */
     play_game:
     status = PLAYING;
     x = y = dir = 0;

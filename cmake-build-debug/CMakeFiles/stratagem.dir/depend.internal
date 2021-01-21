@@ -78,6 +78,7 @@ CMakeFiles/stratagem.dir/Level.cpp.o
  ../SFML/include/SFML/Window/WindowStyle.hpp
  /home/hotash/CLionProjects/stratagem/Level.cpp
  /home/hotash/CLionProjects/stratagem/Level.h
+ /home/hotash/CLionProjects/stratagem/global.h
 CMakeFiles/stratagem.dir/Score.cpp.o
  ../SFML/include/SFML/Config.hpp
  ../SFML/include/SFML/Graphics.hpp
@@ -155,6 +156,7 @@ CMakeFiles/stratagem.dir/Score.cpp.o
  ../SFML/include/SFML/Window/WindowStyle.hpp
  /home/hotash/CLionProjects/stratagem/Score.cpp
  /home/hotash/CLionProjects/stratagem/Score.h
+ /home/hotash/CLionProjects/stratagem/global.h
 CMakeFiles/stratagem.dir/enemy.cpp.o
  /home/hotash/CLionProjects/stratagem/enemy.cpp
  /home/hotash/CLionProjects/stratagem/enemy.h

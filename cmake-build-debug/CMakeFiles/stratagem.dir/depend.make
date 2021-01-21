@@ -77,6 +77,7 @@ CMakeFiles/stratagem.dir/Level.cpp.o: ../SFML/include/SFML/Window/WindowHandle.h
 CMakeFiles/stratagem.dir/Level.cpp.o: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/stratagem.dir/Level.cpp.o: ../Level.cpp
 CMakeFiles/stratagem.dir/Level.cpp.o: ../Level.h
+CMakeFiles/stratagem.dir/Level.cpp.o: ../global.h
 
 CMakeFiles/stratagem.dir/Score.cpp.o: ../SFML/include/SFML/Config.hpp
 CMakeFiles/stratagem.dir/Score.cpp.o: ../SFML/include/SFML/Graphics.hpp
@@ -154,6 +155,7 @@ CMakeFiles/stratagem.dir/Score.cpp.o: ../SFML/include/SFML/Window/WindowHandle.h
 CMakeFiles/stratagem.dir/Score.cpp.o: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/stratagem.dir/Score.cpp.o: ../Score.cpp
 CMakeFiles/stratagem.dir/Score.cpp.o: ../Score.h
+CMakeFiles/stratagem.dir/Score.cpp.o: ../global.h
 
 CMakeFiles/stratagem.dir/enemy.cpp.o: ../enemy.cpp
 CMakeFiles/stratagem.dir/enemy.cpp.o: ../enemy.h

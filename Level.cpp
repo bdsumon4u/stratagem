@@ -3,6 +3,7 @@
 //
 
 #include "SFML/Graphics.hpp"
+#include "global.h"
 #include "Level.h"
 
 using sf::Color;
@@ -12,10 +13,10 @@ Level::Level() {
     leveltxt.setFont(font);
     leveltxt.setFillColor(Color::Red);
     leveltxt.setStyle(Text::Bold);
-    leveltxt.setCharacterSize(50);
-    leveltxt.setPosition(50, 520);
-    sprintf(levelstr, "Level: %d", current);
+    leveltxt.setCharacterSize(40);
+    sprintf(levelstr, "LEVEL: %d", current);
     leveltxt.setString(levelstr);
+    leveltxt.setPosition(N * S - 185, 10);
 }
 
 void Level::update(int updated) {
@@ -24,8 +25,9 @@ void Level::update(int updated) {
     } else {
         current = updated;
     }
-    sprintf(levelstr, "Level: %d", current);
+    sprintf(levelstr, "LEVEL: %d", current);
     leveltxt.setString(levelstr);
+    leveltxt.setPosition(N * S - 185, 10);
 }
 
 void Level::increment(int inc) {
