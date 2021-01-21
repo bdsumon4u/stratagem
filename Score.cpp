@@ -5,7 +5,10 @@
 #include "Score.h"
 
 Score::Score() {
-    font.loadFromFile("assets/fonts/EastSeaDokdo-Regular.ttf");
+    if (!font.loadFromFile("assets/fonts/EastSeaDokdo-Regular.ttf")) {
+        cout << "Font Couldn't Found." << endl;
+        exit(1);
+    }
     scoretxt.setFont(font);
     scoretxt.setFillColor(Color::Red);
     scoretxt.setStyle(Text::Bold);

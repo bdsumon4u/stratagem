@@ -8,7 +8,10 @@ using sf::Color;
 
 Level::Level() {
     enemy_count = min_enemy;
-    font.loadFromFile("assets/fonts/EastSeaDokdo-Regular.ttf");
+    if (!font.loadFromFile("assets/fonts/EastSeaDokdo-Regular.ttf")) {
+        cout << "Font Couldn't Found." << endl;
+        exit(1);
+    }
     leveltxt.setFont(font);
     leveltxt.setFillColor(Color::Red);
     leveltxt.setStyle(Text::Bold);

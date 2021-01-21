@@ -36,16 +36,37 @@ int main() {
     Event ev{};
     Clock clock;
     Music music;
-    music.openFromFile("assets/Mind-Bender.ogg");
+    if (!music.openFromFile("assets/Mind-Bender.ogg")) {
+        cout << "Music Couldn't Found." << endl;
+        exit(1);
+    }
 
     sf::Rect<float> bounds;
     Texture blueTile, redTile, enemy, copter, gameOver, gameWin;
-    blueTile.loadFromFile("assets/blue-tile.png");
-    redTile.loadFromFile("assets/red-tile.png");
-    enemy.loadFromFile("assets/enemy.png");
-    copter.loadFromFile("assets/copter.png");
-    gameOver.loadFromFile("assets/game-over.png");
-    gameWin.loadFromFile("assets/game-win.png");
+    if (!blueTile.loadFromFile("assets/blue-tile.png")) {
+        cout << "Blue Tile Couldn't Found." << endl;
+        exit(1);
+    }
+    if (!redTile.loadFromFile("assets/red-tile.png")) {
+        cout << "Red Tile Couldn't Found." << endl;
+        exit(1);
+    }
+    if (!enemy.loadFromFile("assets/enemy.png")) {
+        cout << "Enemy Couldn't Found." << endl;
+        exit(1);
+    }
+    if (!copter.loadFromFile("assets/copter.png")) {
+        cout << "Copter Couldn't Found." << endl;
+        exit(1);
+    }
+    if (!gameOver.loadFromFile("assets/game-over.png")) {
+        cout << "Game Over Couldn't Found." << endl;
+        exit(1);
+    }
+    if (!gameWin.loadFromFile("assets/game-win.png")) {
+        cout << "Game Win Couldn't Found." << endl;
+        exit(1);
+    }
 
     Sprite sBlueTile(blueTile), sRedTile(redTile), sEnemy(enemy), sCopter(copter), sGameOver(gameOver), sGameWin(gameWin);
     /*

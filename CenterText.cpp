@@ -5,7 +5,10 @@
 #include "CenterText.h"
 
 CenterText::CenterText() {
-    font.loadFromFile("assets/fonts/EastSeaDokdo-Regular.ttf");
+    if (!font.loadFromFile("assets/fonts/EastSeaDokdo-Regular.ttf")) {
+        cout << "Font Couldn't Found." << endl;
+        exit(1);
+    }
     text.setFont(font);
     text.setFillColor(Color::Red);
     text.setCharacterSize(50);
