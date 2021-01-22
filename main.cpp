@@ -36,6 +36,7 @@ int main() {
     Event ev{};
     Clock clock;
     Music music;
+    music.setLoop(true);
     if (!music.openFromFile("assets/Mind-Bender.ogg")) {
         cout << "Music Couldn't Found." << endl;
         exit(1);
@@ -175,16 +176,6 @@ int main() {
             time = 0;
         }
 
-        /**
-         * Keep Moving Enemies
-         */
-        for (int i = 0; i < level.enemy_count; ++i) {
-            enemies[i].move();
-            if (grid[enemies[i].y / S][enemies[i].x / S] == BLOCKING) {
-                status = OVER;
-            }
-        }
-
         /*
          * After Reaching Safe Position
          */
@@ -203,6 +194,16 @@ int main() {
                         score.increment();
                     }
                 }
+            }
+        }
+
+        /**
+         * Keep Moving Enemies
+         */
+        for (int i = 0; i < level.enemy_count; ++i) {
+            enemies[i].move();
+            if (grid[enemies[i].y / S][enemies[i].x / S] == BLOCKING) {
+                status = OVER;
             }
         }
 

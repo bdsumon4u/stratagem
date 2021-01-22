@@ -49,7 +49,9 @@ void Enemy::move()  {
  * Observe, Which Positions are Free For Enemies
  */
 void observe(int row, int col) {
-    grid[row][col] || (grid[row][col] = TRANSITION);
+    if (grid[row][col] == FREE) {
+        grid[row][col] = TRANSITION;
+    }
 
     if (row > 0 && grid[row - 1][col] == FREE) {
         observe(row - 1, col);
