@@ -30,7 +30,6 @@ void Level::update(int updated) {
     }
     sprintf(levelstr, "LEVEL: %d", current);
     leveltxt.setString(levelstr);
-    leveltxt.setPosition(N * S - 185, 10);
 }
 
 void Level::increment(int inc) {

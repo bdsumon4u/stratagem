@@ -6,12 +6,6 @@
 #include "Score.h"
 #include "Level.h"
 
-#ifdef _WIN32
-#include "Windows.h"
-#else
-#include "unistd.h"
-#endif
-
 using std::cout;
 using std::endl;
 using sf::RenderWindow;
@@ -23,6 +17,9 @@ using sf::Sprite;
 using sf::Clock;
 using sf::Vector2f;
 using sf::Music;
+using sf::Rect;
+using sf::sleep;
+using sf::milliseconds;
 
 int main() {
     float time;
@@ -42,7 +39,7 @@ int main() {
         exit(1);
     }
 
-    sf::Rect<float> bounds;
+    Rect<float> bounds;
     Texture blueTile, redTile, enemy, copter, gameOver, gameWin;
     if (!blueTile.loadFromFile("assets/blue-tile.png")) {
         cout << "Blue Tile Couldn't Found." << endl;
@@ -197,7 +194,7 @@ int main() {
             }
         }
 
-        /**
+        /*
          * Keep Moving Enemies
          */
         for (int i = 0; i < level.enemy_count; ++i) {
@@ -261,7 +258,7 @@ int main() {
         window.display();
 
         if (status == WIN) {
-            sleep(3);
+            sleep(milliseconds(3000));
             level.increment();
             goto play_game;
         }

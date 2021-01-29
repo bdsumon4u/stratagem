@@ -1,4 +1,4 @@
-/snap/clion/138/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/hotash/CLionProjects/stratagem
+/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/hotash/CLionProjects/stratagem
 -- Found SFML 2.5.1 in /home/hotash/CLionProjects/stratagem/SFML/include
 -- Configuring done
 -- Generating done

@@ -11,13 +11,13 @@ Enemy::Enemy() {
          * if rnd > 5 then it's ok,
          * otherwise, rnd = 8
          */
-        dx = rnd > 5 ? rnd : 8;
+        dx = rnd > 5 ? rnd : 8; // 6, 7, 8
     } else {
         /**
          * if rnd < -4 then it's ok,
          * otherwise, rnd = -7
          */
-        dx = rnd < -4 ? rnd: -7;
+        dx = rnd < -4 ? rnd: -7; // -5, -6, -7
     }
     /**
      * -7 <= dx < -4, 5 < dx <= 8
